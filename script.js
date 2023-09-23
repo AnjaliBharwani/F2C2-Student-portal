@@ -14,15 +14,12 @@ document.addEventListener("DOMContentLoaded", function () {
     function displayStudents(students) {
         const tableBody = document.getElementById("student-data");
         tableBody.innerHTML = ''; // Clear existing data
-    
+
         students.forEach(student => {
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${student.id}</td>
-                <td>
-                    <img src="./images/dp 1.svg" alt="Student Image" width="25">
-                    ${student.first_name} ${student.last_name}
-                </td>
+                <td><img src="${student.img_src}  height="25" width="25" ">     ${student.first_name} ${student.last_name}</td>
                 <td>${student.gender}</td>
                 <td>${student.class}</td>
                 <td>${student.marks}</td>
